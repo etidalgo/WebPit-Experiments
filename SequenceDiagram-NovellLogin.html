@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>js-sequence diagram with jquery - jsFiddle demo</title>
+  <script type='text/javascript' src='//code.jquery.com/jquery-2.1.0.js'></script>
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+      <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+      <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+      <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/js-sequence-diagrams/1.0.4/sequence-diagram-min.js"></script>
+  <style type='text/css'>
+  </style>
+</head>
+<body>
+  <div class="diagram">
+	participant Classic ASP
+	participant ASP MVC
+	note over Classic ASP: open browser to start.asp,\nstarts a classic ASP session
+	Classic ASP->ASP MVC: start.asp. navigates\nto ASP MVC side to register user
+	note over ASP MVC: recognises user and registers if needed
+	note over ASP MVC: gets browser cookies associated with Classic ASP session
+	ASP MVC->Classic ASP: passes cookies and session data for assignment
+	note over Classic ASP: set session data
+	ASP MVC->Classic ASP:  navigates to DealerHome
+	note over Classic ASP: user uses QIK as needed
+	note over ASP MVC: functionality will be gradually \ntransferred over to ASP MVC 
+</div>
+<script type='text/javascript'>//<![CDATA[ 
+$(".diagram").sequenceDiagram({theme: 'simple'});
+//]]>  
+</script>
+</body>
+</html>

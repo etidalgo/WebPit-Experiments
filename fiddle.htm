@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text\javascript">
+var logToScreen = function(message) {
+    // var display = document.getElementById('display');
+    var d = document.createElement("div");
+    d.innerText = message;
+    document.body.appendChild(d);
+};
+
+logToScreen('js forEach');
+['alpha', 'beta', 'gamma'].forEach(function(item) {
+    logToScreen('\t' + item);
+});
+
+var arr = ['alpha', 'beta', 'gamma', 'delta'];
+
+// jQuery.each() | jQuery API Documentation <http://api.jquery.com/jquery.each/>
+
+logToScreen('jQuery each');
+$.each(arr, function(ix, item) {
+    logToScreen('\t' + ix + ' - ' + item);
+});
+
+$('#activate').click(function() {
+    //debugger; still doesn't work
+    $('#comparison').dialog('open');
+});
+
+$(function() {
+    //debugger;
+    
+    $( "#datepicker" ).datepicker({dateFormat: 'dd-mm-yy'});
+});
+
+
+</script>
+</head>
+<body>
+<p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can appear and disappear. Some random data and punctuation &#46
+</p>
+
+<div class='log' id='display'></div>
+
+<button id='activate' >Open D'Log</button>
+
+<div id='comparison'>
+    Nothing
+</div>
+
+<p>Date: <input type="text" id="datepicker"></p>
+<div class="pagecontrols">    
+<font class="first" face="Webdings" size="5">9</font>
+<font class="previous" face="Webdings" size="5">3</font>
+<font class="next" face="Webdings" size="5">4</font>
+<font class="last" face="Webdings" size="5">:</font>    
+    </div>
+</body>
+</html>

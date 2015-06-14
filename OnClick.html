@@ -1,0 +1,46 @@
+
+<html>
+<head>
+	    <script type="text/javascript">
+	        // Set js vars based on server asp vars. 
+	        var isLender = false;
+function enableLenderView( isEnabled ) {
+    //debugger;
+    var elems = document.getElementsByClassName('lenderView');
+	var ix;
+	for (ix = 0; ix < elems.length; ++ix) {
+		if (isEnabled) {
+			elems[ix].removeAttribute('disabled');
+		} else {
+			elems[ix].setAttribute('disabled', 'disabled');
+		}
+	}
+}
+
+function enableConsultantView( isEnabled ) {
+    
+    var elems = document.getElementsByClassName('consultantView');
+	var ix;
+	for (ix = 0; ix < elems.length; ++ix) {
+		if (isEnabled) {
+			elems[ix].removeAttribute('disabled');
+		} else {
+			elems[ix].setAttribute('disabled', 'disabled');
+		}
+	}
+}
+
+			</script>
+</head>
+<body>
+<div><input type="text" class="lenderView" id="textbox1" value="alpha" /></div>
+<div><input type="text" class="lenderView" id="textbox2" value="beta"/></div>
+<div><input type="text" class="consultantView" id="textbox3" value="gamma"/></div>
+<div><input type="text" class="consultantView" id="textbox4" value="delta"/></div>
+
+<div><input type="button" id="enableLender" value="Enable Lender" onclick="enableLenderView(true);" /></div>
+<div><input type="button" id="disableLender" value="Disable Lender" onclick="enableLenderView(false);" /></div>
+<div><input type="button" id="enableConsultant" value="Enable Consultant" onclick="enableConsultantView(true);" /></div>
+<div><input type="button" id="disableConsultant" value="Disable Consultant" onclick="enableConsultantView(false);" /></div>
+</body>
+</html>
