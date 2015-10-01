@@ -7,6 +7,7 @@
 	prevDate = CDate("21/08/1999 10:16:41 a.m.")
 	futureDate = CDate("21/08/2025 10:16:41 a.m.")
 	thisDate = Date()
+	nextDate = DateAdd("d", 1, thisDate)
 
 Public Sub DateCompare ( oneDate, notherDate )
 
@@ -42,7 +43,16 @@ End Sub
 	Response.Write "Date(): " & Date() & "<br>"
 	Response.Write "Now(): " & Now() & "<br>"
 	
+	On Error Resume Next
+	'This gives a type mismatch
 	Response.Write "CDbl(""""): " & CDbl("") & "<br>"
+	If Err.Number <> 0 Then
+		Response.Write Err.Description & "<br>"
+	End If
+	
+	Response.Write "thisDate: " & thisDate & "<br>"
+	
+	Response.Write "nextDate: " & nextDate & "<br>"
 %><br>
 
 </body>
