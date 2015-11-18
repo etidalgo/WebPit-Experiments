@@ -7,25 +7,49 @@ div.columns div.col {
     display: inline-block;
     vertical-align: top;
     position: relative;
+}
+
+div.col3 {
     width: 32%;
 }
 
+div.col2 {
+	width: 49%;
+}
 .outline div {
 	border: 1px solid black;
 	height: 20px;
 }
 </style>
-<script type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		//$(".demo").append("<h4>Code</h4>")
+		//$(".demo").append("<input class='codedisplay'></input>")
+		//$(".component .codedisplay").val($(".demo").html())
+		//$(".demo").html();
+	});
+</script>
 </head>
 <body>
 
 <div class="component">
-<h3>Columns - 4</h3>
+<h3>Columns - 3</h3>
 	<div class="demo">
 	<div class="columns outline">
-		<div class="col"></div>
-		<div class="col"></div>
-		<div class="col"></div>
+		<div class="col col3"></div>
+		<div class="col col3"></div>
+		<div class="col col3"></div>
+	</div>
+	</div>
+</div>
+
+<div class="component">
+<h3>Columns - 2</h3>
+	<div class="demo">
+	<div class="columns outline">
+		<div class="col col2"></div>
+		<div class="col col2"></div>
 	</div>
 	</div>
 </div>
