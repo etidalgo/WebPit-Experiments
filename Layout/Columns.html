@@ -1,0 +1,27 @@
+<html>
+<head>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- CSS -->
+    <link href="layout.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $("div").each(function() { $(this).prepend("Id: " + $(this).attr("id") + "  -  Class: " + $(this).attr("class") )});
+        });
+    </script>
+</head>
+<body>
+
+	<div class="columns4">
+		<div class="col ">
+		</div>
+		<div class="col ">
+		</div>
+		<div class="col">
+		</div>
+		<div class="col">
+		</div>
+	</div>
+</body>
+</html>
