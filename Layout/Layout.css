@@ -21,3 +21,20 @@ div.columns4 div.col {
 div.col { 
 	height: 100px;
 	}
+	
+	
+.container {
+		width: 200px;
+	}
+	
+.container .component {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 95px; /* Todo: Get a proper width*/
+    vertical-align: top;
+}	
+
+.component {
+	border: 1px solid black;
+}

@@ -1,0 +1,37 @@
+<html>
+<head>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- CSS -->
+    <link href="layout.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript">
+	function AddComponent() {
+		$("#container").append("<div  class='component'>Test</component>");
+	}
+	</script>
+</head>
+<body>
+
+	<div id="container" class="container">
+		<div id="alpha" class="component">
+			ALPHA
+		</div>
+		<div id="beta" class="component">
+			BETA
+		</div>
+		<div id="gamma" class="component">
+			GAMMA
+		</div>
+		<div id="delta" class="component">
+			DELTA
+		</div>
+		<div id="epsilon" class="component">
+			EPSILON
+		</div>
+	</div>
+	<div >
+		<button onclick="javascript:AddComponent()">Add</button>
+	</div>
+</body>
+</html>
