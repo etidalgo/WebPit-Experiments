@@ -1,3 +1,7 @@
+div.DisplaySection {
+	border: 1px solid #000000;
+}
+
 div.columns4 {
 	width: 800px;
 	margin-left: auto;
