@@ -1,0 +1,38 @@
+<html>
+<head>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <!-- CSS -->
+    <link href="layout.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var nt = $('<input type="hidden" id="hiddenInputX" name="hiddenInputX" value="Hidden Input" />');
+			nt.appendTo('body');
+			});
+	</script>
+</head>
+<body>
+
+<input type="hidden" id="hiddenInput" name="hiddenInput" value="Hidden in plain sight" />
+
+<ul class="liststyle1">
+	<li>Timely</li>
+	<li>Fawcett</li>
+	<li>DC
+		<ul class="liststyle1">
+			<li>Vertigo</li>
+			<li>Charlton</li>
+			<li>Paradox</li>
+		</ul>
+	
+	</li>
+	<li>Atlas</li>
+	<li>First</li>
+	<li>Image</li>
+</ul>
+
+	<button onclick="$('#hiddenInputX').attr('type', 'text');" >Click me</button>
+	<button onclick="$('#hiddenInputX').toggle();" >Toggle</button>	
+</body>
+</html>
