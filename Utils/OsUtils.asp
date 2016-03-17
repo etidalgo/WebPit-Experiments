@@ -45,7 +45,8 @@ Sub DumpWmiInfo ()
 End Sub
 
 ' File Version Compare Code <http://makemsi-manual.dennisbareis.com/file_version_compare_code.htm>
-Function CompareVersionStrings( verA, verB )
+'isUseShorterIndex 
+Function CompareVersionStrings( verA, verB, isUseShorterIndex )
 	CompareVersionStrings = Version_EqualTo
 
 	'-------- Split up the version numbers ------------------------------
@@ -54,10 +55,11 @@ Function CompareVersionStrings( verA, verB )
 
 	'-------- How many "bits" are there (use largest of the two) --------
 	dim LastIndex : LastIndex = ubound(VerBitsF1)
-	if  ubound(VerBitsF2) > LastIndex then
+	if  ( ubound(VerBitsF2) > LastIndex Xor isUseShorterIndex ) then
 		LastIndex = ubound(VerBitsF2)
 	end if	
 
+	
 	'-------- Work through each of the bits (probably 4) ----------------
 	dim i
 	for i = 0 to LastIndex

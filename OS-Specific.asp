@@ -19,28 +19,37 @@ pre{
 </head>
 <body>
 <% 
-Sub TestCompare ( verA, verB, expected ) 
-	If (CompareVersionStrings( verA, verB) <> expected) Then Response.Write "Error: CompareVersionStrings( """ & verA & """, """ & verB & """) = " & CompareVersionStrings( verA, verB) &" <br />"
+Sub TestCompare ( verA, verB, expected, useShorter ) 
+	If (CompareVersionStrings( verA, verB, useShorter ) <> expected) Then Response.Write "Error: CompareVersionStrings( """ & verA & """, """ & verB & """) = " & CompareVersionStrings( verA, verB, useShorter) &" <br />"
 End Sub
 
 	Call DumpWmiInfo
 	
 	'Stop
-	Call TestCompare( "1.0", "1.0", Version_EqualTo )
-	Call TestCompare( "1.0", "2.0", Version_LessThan )
-	Call TestCompare( "2.0", "1.0", Version_GreaterThan )
-	Call TestCompare( "1.0", "1.0.0", Version_EqualTo )
-	Call TestCompare( "1.0.0", "1.0", Version_EqualTo )
+	Call TestCompare( "1.0", "1.0", Version_EqualTo, false )
+	Call TestCompare( "1.0", "2.0", Version_LessThan, false )
+	Call TestCompare( "2.0", "1.0", Version_GreaterThan, false )
+	Call TestCompare( "1.0", "1.0.0", Version_EqualTo, false )
+	Call TestCompare( "1.0.0", "1.0", Version_EqualTo, false )
 
-	Call TestCompare( "1.0.1.0", "1.0.2.0", Version_LessThan )
-	Call TestCompare( "1.0.2", "1.0.1", Version_GreaterThan )
-	Call TestCompare( "2.1", "1.3", Version_GreaterThan )
-	Call TestCompare( "1.0.1.0", "1.0", Version_GreaterThan )
+	Call TestCompare( "1.0.1.0", "1.0.2.0", Version_LessThan, false )
+	Call TestCompare( "1.0.1.0", "1.0.2", Version_LessThan, false )
+	Call TestCompare( "1.0.1.0", "1.0", Version_GreaterThan, false )
+	Call TestCompare( "1.0.2", "1.0.1", Version_GreaterThan, false )
+	Call TestCompare( "2.1", "1.3", Version_GreaterThan, false )
+	Call TestCompare( "1.0.1.0", "1.0", Version_GreaterThan, false )
 
-	Call TestCompare( "1.0", "1.0", Version_LessThan )
-	Call TestCompare( "1.0", "2.0", Version_EqualTo )
-	Call TestCompare( "2.0", "1.0", Version_EqualTo )
+	Stop
+	Call TestCompare( "1.0", "1.0.2", Version_EqualTo, true )
+	Call TestCompare( "2.1", "1", Version_GreaterThan, true )
+	Call TestCompare( "1.0.1.0", "1.0", Version_EqualTo, true )
+	
+	Response.Write "Force errors <br/>"
+	Call TestCompare( "1.0", "1.0", Version_LessThan, false )
+	Call TestCompare( "1.0", "2.0", Version_EqualTo, false )
+	Call TestCompare( "2.0", "1.0", Version_EqualTo, false )
 
+	
 	
 %>
 <br />

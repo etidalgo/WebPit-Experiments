@@ -22,7 +22,7 @@
 
 <head>    
     <title>Qik for the Web</title>   
-	<meta http-equiv="X-UA-Compatible" Content="IE=Edge" />
+	<meta http-equiv="X-UA-Compatible" Content="IE=10" />
 
 <script type="text/javascript">
 	var foolurl=document.url;
@@ -39,7 +39,7 @@
 	</form>
 	
 	<% response.write "<script type=""text/javascript"">" %>
-	<% response.write "alert(""I hate vbscript"")" %>
+	<% response.write "alert(""Alert dispatched"")" %>
 	<% response.write "</script>" %>
 </body>
 <script type="text/javascript">
