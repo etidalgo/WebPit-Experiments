@@ -25,31 +25,31 @@ End Sub
 
 	Call DumpWmiInfo
 	
-	'Stop
-	Call TestCompare( "1.0", "1.0", Version_EqualTo, false )
-	Call TestCompare( "1.0", "2.0", Version_LessThan, false )
-	Call TestCompare( "2.0", "1.0", Version_GreaterThan, false )
-	Call TestCompare( "1.0", "1.0.0", Version_EqualTo, false )
-	Call TestCompare( "1.0.0", "1.0", Version_EqualTo, false )
-
-	Call TestCompare( "1.0.1.0", "1.0.2.0", Version_LessThan, false )
-	Call TestCompare( "1.0.1.0", "1.0.2", Version_LessThan, false )
-	Call TestCompare( "1.0.1.0", "1.0", Version_GreaterThan, false )
-	Call TestCompare( "1.0.2", "1.0.1", Version_GreaterThan, false )
-	Call TestCompare( "2.1", "1.3", Version_GreaterThan, false )
-	Call TestCompare( "1.0.1.0", "1.0", Version_GreaterThan, false )
-
 	Stop
-	Call TestCompare( "1.0", "1.0.2", Version_EqualTo, true )
-	Call TestCompare( "2.1", "1", Version_GreaterThan, true )
-	Call TestCompare( "1.0.1.0", "1.0", Version_EqualTo, true )
+	Call TestCompare( "1.0", "1.0", VerCompare_EqualTo, false )
+	Call TestCompare( "1.0", "2.0", VerCompare_LessThan, false )
+	Call TestCompare( "2.0", "1.0", VerCompare_GreaterThan, false )
+	Call TestCompare( "1.0", "1.0.0", VerCompare_EqualTo, false )
+	Call TestCompare( "1.0.0", "1.0", VerCompare_EqualTo, false )
+
+	Call TestCompare( "1.0.1.0", "1.0.2.0", VerCompare_LessThan, false )
+	Call TestCompare( "1.0.1.0", "1.0.2", VerCompare_LessThan, false )
+	Call TestCompare( "1.0.1.0", "1.0", VerCompare_GreaterThan, false )
+	Call TestCompare( "1.0.2", "1.0.1", VerCompare_GreaterThan, false )
+	Call TestCompare( "2.1", "1.3", VerCompare_GreaterThan, false )
+	Call TestCompare( "1.0.1.0", "1.0", VerCompare_GreaterThan, false )
+
+	
+	Call TestCompare( "1.0", "1.0.2", VerCompare_EqualTo, true )
+	Call TestCompare( "2.1", "1", VerCompare_GreaterThan, true )
+	Call TestCompare( "1.0.1.0", "1.0", VerCompare_EqualTo, true )
 	
 	Response.Write "Force errors <br/>"
-	Call TestCompare( "1.0", "1.0", Version_LessThan, false )
-	Call TestCompare( "1.0", "2.0", Version_EqualTo, false )
-	Call TestCompare( "2.0", "1.0", Version_EqualTo, false )
+	Call TestCompare( "1.0", "1.0", VerCompare_LessThan, false )
+	Call TestCompare( "1.0", "2.0", VerCompare_EqualTo, false )
+	Call TestCompare( "2.0", "1.0", VerCompare_EqualTo, false )
 
-	
+	Response.Write GetWindowsVersion() 
 	
 %>
 <br />

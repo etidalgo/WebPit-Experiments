@@ -1,9 +1,22 @@
 <%
 
 'Version compare
-	Const Version_LessThan = -1
-	Const Version_EqualTo = 0
-	Const Version_GreaterThan = 1
+	Const VerCompare_LessThan = -1
+	Const VerCompare_EqualTo = 0
+	Const VerCompare_GreaterThan = 1
+	
+'Operating Systems
+	Const Version_PreServer2008 = 3
+	Const Version_WinUnknown = 4
+	Const Version_XP_2000 = 5
+	Const Version_XP64_Server2003 = 52
+	Const Version_Vista_Server2008 = 60
+	Const Version_Server2008R2_7 = 61
+	Const Version_Server2012_8 = 62
+	Const Version_Server2012R2_81 = 63
+	Const Version_10_Server2016 = 100
+	Const Version_Future = 200
+	
 	
 	
 Sub DumpWmiInfo ()
@@ -44,10 +57,34 @@ Sub DumpWmiInfo ()
 	
 End Sub
 
+Function GetOsVersion()
+
+	'vbscript - How to determine windows version from a VB script? - Stack Overflow <http://stackoverflow.com/questions/4542284/how-to-determine-windows-version-from-a-vb-script>
+	'WMI Tasks: Operating Systems (Windows) <https://msdn.microsoft.com/en-us/library/aa394596(v=vs.85).aspx?cs-save-lang=1&cs-lang=vb#code-snippet-2>
+
+	Set dtmConvertedDate = CreateObject("WbemScripting.SWbemDateTime")
+	strComputer = "."
+	Set objWMIService = GetObject("winmgmts:{impersonationLevel=impersonate}!\\" & strComputer & "\root\cimv2")
+	Set oss = objWMIService.ExecQuery ("Select * from Win32_OperatingSystem")
+
+	For Each os in oss
+		GetOsVersion = os.Version
+	Next
+
+	Set dtmConvertedDate = Nothing
+	Set objWMIService = Nothing
+	Set oss = Nothing
+	
+End Function 'GetOsVersion
+
+Function CompareVersion( verA, verB )
+	CompareVersion = CompareVersionStrings(verA, verB, false)
+End Function 'CompareVersion
+
 ' File Version Compare Code <http://makemsi-manual.dennisbareis.com/file_version_compare_code.htm>
 'isUseShorterIndex 
 Function CompareVersionStrings( verA, verB, isUseShorterIndex )
-	CompareVersionStrings = Version_EqualTo
+	CompareVersionStrings = VerCompare_EqualTo
 
 	'-------- Split up the version numbers ------------------------------
 	dim VerBitsF1 : VerBitsF1 = split(verA, ".")
@@ -59,7 +96,6 @@ Function CompareVersionStrings( verA, verB, isUseShorterIndex )
 		LastIndex = ubound(VerBitsF2)
 	end if	
 
-	
 	'-------- Work through each of the bits (probably 4) ----------------
 	dim i
 	for i = 0 to LastIndex
@@ -72,15 +108,28 @@ Function CompareVersionStrings( verA, verB, isUseShorterIndex )
 
 		'-------- Compare the values (exit when mismatch found) ---------
 		if  cint(BitF1) > cint(BitF2) then
-			CompareVersionStrings = Version_GreaterThan
+			CompareVersionStrings = VerCompare_GreaterThan
 		else
 			if  cint(BitF1) < cint(BitF2) then
-				CompareVersionStrings = Version_LessThan
+				CompareVersionStrings = VerCompare_LessThan
 			end if
 		end if
-		if CompareVersionStrings <> Version_EqualTo then exit for
+		if CompareVersionStrings <> VerCompare_EqualTo then exit for
 	next
 	
+End Function 'CompareVersionStrings
+
+Function GetWindowsVersion()
+	OsVersion = GetOsVersion()
+	
+	GetWindowsVersion = Version_PreServer2008
+	If CompareVersionStrings( OsVersion, "6.0", true ) = VerCompare_EqualTo Then  GetWindowsVersion = Version_PreServer2008
+	If CompareVersionStrings( OsVersion, "6.1", true ) = VerCompare_EqualTo Then  GetWindowsVersion = Version_Server2008R2_7
+	If CompareVersionStrings( OsVersion, "6.2", true ) = VerCompare_EqualTo Then  GetWindowsVersion = Version_Server2012_8
+	If CompareVersionStrings( OsVersion, "6.3", true ) = VerCompare_EqualTo Then  GetWindowsVersion = Version_Server2012R2_81
+	If CompareVersionStrings( OsVersion, "10.0", true ) = VerCompare_EqualTo Then  GetWindowsVersion = Version_10_Server2016
+	If CompareVersionStrings( OsVersion, "10.0", true ) = VerCompare_GreaterThan Then  GetWindowsVersion = Version_Future
+
 End Function
 
 %>
