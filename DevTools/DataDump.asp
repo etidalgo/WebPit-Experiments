@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Data dump - ASP Application and Session Data</title>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" ></script>
     <script type="text/javascript">
 <%	
 For Each keyName In Application.Contents
@@ -31,10 +32,48 @@ For Each keyName In Session.Contents
 	
 Next 
 %>
-	
+	function PostSessionValues() {
+		var settings = {
+		  "async": true,
+		  "crossDomain": true,
+		  "url": "/Experiments/DevTools/SessionDataAssign.asp",
+		  "method": "POST",
+		  "headers": {
+			"cache-control": "no-cache",
+			"content-type": "application/x-www-form-urlencoded"
+		  },
+		  "data": {
+			"ALPHA": "ALPHA_VALUE  1461146872",
+			"BETA": "BETA_VALUE  1461146872"
+		  }
+		}
+
+		$.ajax(settings).done(function (response) {
+		  console.log(response);
+		});	
+	}
+
+	$(document).ready(function(){
+		window.setInterval(function() {
+			window.location.reload();
+		}, 5000);
+	});
 	</script>
 </head>
 <body>
+<p>Helper for Classic ASP - Session and Application value dump</p>
+<p>Aims</p>
+<ul>
+<li>Batch session variables</li>
+<li>Click and edit</li>
+<li>Improve formatting</li>
+<li>Delete</li>
+<li>Single page app style - refresh section instead of page</li>
+</ul>
+<div><input type="button" value="Post Session Values" onclick="PostSessionValues()"></input></div>
+<div><input type="button" value="Reload" onclick="javascript:window.location.reload()"></input></div>
+
+
 <%
 
 Dim keyName
