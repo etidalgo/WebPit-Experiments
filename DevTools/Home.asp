@@ -54,11 +54,12 @@ Next
 	}
 
 	function RefreshVariableDisplay() {
-		$("#VariablesContainer").load("/Experiments/DevTools/pvDataDump.asp");
+		$("#VariablesDisplay").load("/Experiments/DevTools/pvDataDump.asp");
 	}
 	
 	$(document).ready(function(){
 		RefreshVariableDisplay();
+		setTimeout( RefreshVariableDisplay, 5000);
 	});
 	</script>
 	<style>
@@ -84,10 +85,22 @@ Next
 			margin-left: 50px;
 
 		}
+		
+		.ControlContainer {
+			float: left;
+			width: 40%;
+		}
+		
+		.DisplayContainer {
+			float: right;
+			width: 55%;
+			border: 1px solid #000000;
+		}
 	</style>
 </head>
 <body>
 <p>Helper for Classic ASP - Session and Application value dump</p>
+<div class="ControlContainer">
 <p>Aims</p>
 <ul>
 <li>Batch session variables</li>
@@ -98,9 +111,11 @@ Next
 </ul>
 <div><input type="button" value="Post Session Values" onclick="PostSessionValues()"></input></div>
 <div><input type="button" value="Reload" onclick="javascript:RefreshVariableDisplay();"></input></div>
-
-<div id="VariablesContainer">
 </div>
 
+<div class="DisplayContainer" >
+<div id="VariablesDisplay" >
+</div>
+</div>
 </body>
 </html>

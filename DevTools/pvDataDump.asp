@@ -1,6 +1,9 @@
 <%@ Language=VBScript %>
+<% 'Partial view
+ %>
 
 <div id="VariablesDiv">
+
 <label class="header">SessionID: <%=Session.SessionID%></label><BR><BR>
 Auth_User: <%=Request.ServerVariables("AUTH_USER")%><BR><BR>
 
@@ -46,5 +49,6 @@ For Each keyName In Session.Contents
 Next 
 %>
 
+<div> Updated: <%=FormatDateTime(Now)%> </div>
 </div>
 
