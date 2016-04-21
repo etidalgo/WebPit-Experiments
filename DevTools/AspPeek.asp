@@ -36,14 +36,14 @@ Next
 		var settings = {
 		  "async": true,
 		  "crossDomain": true,
-		  "url": "/Experiments/DevTools/SessionDataAssign.asp",
+		  "url": "./SessionDataAssign.asp",
 		  "method": "POST",
 		  "headers": {
 			"cache-control": "no-cache",
 			"content-type": "application/x-www-form-urlencoded"
 		  },
 		  "data": {
-			"ALPHA": "ALPHA_VALUE  1461146872",
+			"ALPHA": "ALPHA_VALUE " ,
 			"BETA": "BETA_VALUE  1461146872"
 		  }
 		}
@@ -54,7 +54,7 @@ Next
 	}
 
 	function RefreshVariableDisplay() {
-		$("#VariablesDisplay").load("/Experiments/DevTools/pvDataDump.asp");
+		$("#VariablesDisplay").load("./pvDataDump.asp");
 	}
 	
 	$(document).ready(function(){
