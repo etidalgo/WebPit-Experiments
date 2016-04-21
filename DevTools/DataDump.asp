@@ -59,6 +59,30 @@ Next
 		}, 5000);
 	});
 	</script>
+	<style>
+		.pageContent {
+		
+		}
+		.header {
+		}
+		
+		.entry {
+			margin-left: 20px;
+			width: 700px;
+		}
+		
+		.entry div {
+			display: inline-block;			
+		}
+		.keyName {
+		}
+		
+		.keyValue {
+			color: blue;
+			margin-left: 50px;
+
+		}
+	</style>
 </head>
 <body>
 <p>Helper for Classic ASP - Session and Application value dump</p>
@@ -73,6 +97,8 @@ Next
 <div><input type="button" value="Post Session Values" onclick="PostSessionValues()"></input></div>
 <div><input type="button" value="Reload" onclick="javascript:window.location.reload()"></input></div>
 
+<label class="header">Application Variables - <% =Application.Contents.Count %> Found</label><br><br>
+SVRCONFIG_DB_NAME: <%=Application("SVRCONFIG_DB_NAME")%> <BR><BR>
 
 <%
 
@@ -93,10 +119,14 @@ For Each keyName In Application.Contents
     Else
         keyValue = cstr(Application.Contents(keyName))
     End If
-    Response.Write "Application[" & keyName & "]: " & keyValue & "<BR>" & vbCrLf  
+%>	
+    <div class="entry"><div class="keyName"><%=keyName%></div> <div class="keyValue"><%=keyValue%></div></div><BR>
+<%	
 Next 
-	
-	Response.Write "<hr>"
+%>	
+<hr>
+<label class="header">Session Variables - <% =Session.Contents.Count %> Found</label><br><br>
+<%	
 For Each keyName In Session.Contents
     If ( IsObject( Session(keyName) ) ) Then
         keyValue = "&lt;object&gt;"
@@ -107,10 +137,12 @@ For Each keyName In Session.Contents
     Else
         keyValue = cstr(Session.Contents(keyName))
     End If
-    Response.Write "Session[" & keyName & "]: " & keyValue & "<BR>" & vbCrLf  
+%>	
+    <div class="entry"><div class="keyName"><%=keyName%></div> <div class="keyValue"><%=keyValue%></div></div><BR>
+<%	
 Next 
 %>
 
-
+</div>
 </body>
 </html>

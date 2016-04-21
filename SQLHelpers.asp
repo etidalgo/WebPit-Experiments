@@ -1,5 +1,33 @@
 <%
 
+'Wraps around classes that have Public Clauses() and Public NumRecords
+'Assumes string. Object arrays will to use 'set' command. 
+Class EnumeratorTemplate
+
+	Private m_Array
+    Private m_Idx
+
+    Private Sub Class_Initialize()		
+        m_Idx = 0
+    End Sub
+
+    Private Sub Class_Terminate()
+		set m_Array	= Nothing
+    End Sub
+	
+	Public Sub Init( objArray )
+		set m_Array = objArray
+		m_Idx = 0
+	End Sub
+	
+	Function Current()
+		
+	End Function
+	
+	Function Next()
+	End Function
+End Class
+
 '-----------------------------------------
 Class ClauseBuilder
 	Public Clauses()
