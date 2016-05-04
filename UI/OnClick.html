@@ -1,0 +1,57 @@
+<html>
+<head>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<script type="text/javascript">
+	var UpdateKeyValue = function(container) {
+		var varKey = $(container).find(".keyField input").val();
+		var varValue = $(container).find(".valueField input").val();
+		// 
+		console.log("Key: " + varKey);
+		console.log("value: " + varValue);
+	}
+	
+	var DisableKeyValue = function(container) {
+		var varKey = $(container).find(".keyField input").val();
+		// 
+		console.log("Key: " + varKey);
+	}
+	
+	var UpdatePreset = function() {
+		console.log("UpdatePreset: " + $(this).prop("id"));
+		var container = $(this).closest(".KeyValuePairContainer");
+		UpdateKeyValue(container);
+	}
+	
+	var TogglePreset = function() {
+		console.log("TogglePreset: " + $(this).prop("id"));
+		var container = $(this).closest(".KeyValuePairContainer");
+		var isChecked = $(this).is(":checked");
+		$(container).find(".updateAction input[type=button]").prop("disabled", !isChecked);
+		if (isChecked) {
+			UpdateKeyValue(container);
+		} else {
+			DisableKeyValue(container);
+		}
+		
+	}
+	
+	$(document).ready(function(){
+		$("div.checkField input[type=checkbox]").click(TogglePreset);
+		$("div.updateAction input[type=button]").click(UpdatePreset).prop("disabled", true);
+	});	
+	</script>
+	
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+<div class="ParamsContainer">
+<div id="override_01" class="KeyValuePairContainer">
+	<div class="checkField" ><input id="override_check_01" type="checkbox" ></input></div>
+	<div class="keyField" ><input id="override_key_01" type="text" value="OverrideRecipient" readonly="readonly" ></input></div>
+	<div class="valueField" ><input id="override_value_01" type="text" ></input></div>
+	<div class="updateAction" ><input id="override_update_01" type="button" value="Update" ></input></div>
+</div>
+</div>
+</body>
+</html>
