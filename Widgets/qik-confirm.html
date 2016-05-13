@@ -1,0 +1,58 @@
+<html>
+	<head>
+	<script src="jquery-1.7.2.min.js"></script>
+	<script src="pshadow.js"></script>
+
+        <!-- jquery-confirm and related files -->
+	    <script type="text/javascript" src="qik-confirm.js"></script>	
+
+		<link rel="stylesheet" type="text/css" href="main.css" />
+		<link rel="stylesheet" type="text/css" href="globals.css" />
+        <link rel="stylesheet" type="text/css" href="qik-confirm.css" />
+
+		<script type="text/javascript" >
+			var confirmBox;
+
+			function ShowQikConfirm() {
+				confirmBox = $.qikconfirm({
+					title: 'Confirmation',
+					content: 'Your session is about to expire in <b>zero</b> minutes. Once it has expired any data entered will now be lost!',
+					confirmButton: 'Generate',
+					cancelButton: 'No',
+					icon: 'fa fa-question-circle',
+					confirm: function () {
+						alert("Title[" + this.title + "] Confirmed!");
+					},
+					cancel: function() {
+						alert("Title[" + this.title + "]Cancelled!");
+					}
+				});
+				confirmBox.$body.pShadow({ type: 'middle' });
+			}
+			
+			function ShowQikAlert() {
+				confirmBox = $.qikalert({
+					title: 'Note:',
+					content: 'Your session is about to expire in <b>zero</b> minutes. Once it has expired any data entered will now be lost!',
+					confirmButton: 'Got it!',
+					icon: 'fa fa-question-circle',
+					confirm: function () {
+						alert("Alerted!");
+					}
+				});
+				confirmBox.$body.pShadow({ type: 'middle' });
+			}
+		</script>
+	</head>
+	<body>
+	<form id="thisForm">
+
+				<button type="button" onclick="ShowQikConfirm()">Show Qik Confirm</button>
+				<button type="button" onclick="ShowQikAlert()">Show Qik Alert</button>
+
+                <input type="hidden" id="Hid_AlertFocus" name="Hid_AlertFocus" value="">
+				
+		</form>
+	</body>
+</html>
+

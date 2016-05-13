@@ -1,0 +1,1119 @@
+/******************************************************/
+/* Finance Now Ltd Online PreApproval Responsive CSS **************/
+/******************************************************/
+
+/******************************************************/
+/* Width - MIN 1024px  *****************/
+/******************************************************/
+
+.nicescroll-rails {
+    z-index:999;
+}
+
+body{-webkit-text-size-adjust:none;}
+
+input.addressFinder{
+    background:#fef5dd;
+    border:1px solid #fca001 !important;
+}
+div.AddFinderBox div.watermarkify-wrap span.watermarkify-watermark{
+    text-shadow:0 1px 0 rgba(255,255,255,0.9);
+    color: #000000;
+}
+
+
+@media only screen and (min-width:1024px) {
+
+    body{
+        margin:0px !important;
+        font-family:arial !important;
+        overflow-x:hidden !important;
+    }
+    
+    div#header{
+        font-family:arial !important;
+    }
+
+    div#lblAppTitle{
+        font-size:16px;
+        color:#003962;
+        line-height:3em;
+        width:100%;
+    }
+
+    div#content{
+    width:1024px;
+    margin:0 auto;
+}
+
+    div#footer{
+        border-top:1px solid #cccccc;
+        margin-top:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footertop {
+        padding:5px;
+    }
+
+    div#footer div#footerLeft {
+        padding:0px;
+    }
+
+    div#footer div#footerRight {
+        padding:0px;
+    }
+
+    img#MarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#BrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -15px;
+          
+    }
+
+    img#InfoMarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#InfoBrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+    /* Step 1  *****************/
+
+    div#tblStep01 div#acknowledge {
+        border:1px solid #cccccc;
+    }
+
+    /* Step 2  *****************/
+    div.textBox{
+        width:100%;
+        float:left;
+        line-height:26px;
+        height:26px;
+    }
+
+        div.textBox span.dataLabel{
+            width:40%;
+            float:left;
+            line-height:20px;
+        }
+
+        div.textBox span.dataField{
+            width:60%;
+            float:left;
+            line-height:20px;
+        }
+
+    div.stepBox{
+        min-height:388px !important;
+        float:left;
+    }
+
+    div#footer{
+        border-top:1px solid #cccccc;
+        margin-top:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footertop {
+        padding:5px;
+    }
+
+    div#footer div#footerLeft {
+        padding:0px 5px 0 5px;
+    }
+
+    div#footer div#footerRight {
+        padding:0px 5px 0 5px;
+    }
+
+    div#footer div#footertop {
+        padding:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footerLeft {
+        padding:0px;
+        float:left;
+        width:15%;
+    }
+
+        div#footer div#footerLeft span.btn {
+            margin:5px 0px 5px 5px;
+            padding:0 12px !important;
+        }
+
+    div#footer div#footerMiddle {
+        float:left;
+        width:70%;
+        text-align:center;
+    }
+
+    img#MarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#BrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -15px;
+          
+    }
+
+    img#InfoMarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#InfoBrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+    div#footer div#footerMiddle img#fnlLogo{
+        width:170px;
+        margin-top:5px !important;
+    }
+
+
+    div#footer div#footerRight {
+        padding:0px;
+        float:left;
+        width:15%;
+    }
+
+        div#footer div#footerRight span.btn {
+            margin:5px 5px 5px 0px;
+            padding:0 12px !important;
+        }
+
+    /* Step 7 - Summary */
+
+    div.individual, div.joint{
+        width:60%;
+    }
+
+    div.appSummary{
+        line-height:20px !important;
+        height:auto !important;
+        clear:both;
+        width:50%;
+    }
+
+    div.loanDetails{
+        float:right;
+        width:35%;
+    }
+
+    #lblAppOutcome{
+        float:left;
+        margin-bottom:15px;
+    }
+
+    
+    #divOutcomeBody{
+        float:left;
+        width: 70% !important;
+    }
+
+    #lblOutcomedoc{
+        clear:both;
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    a#viewletterbutton {
+            padding:0 12px !important;
+            float:left;
+        }
+
+    #divOutcomeIcon{
+        float: left;
+        font-size: 60px;
+        margin: 0 15px 0 0 !important;
+        background: url('../../_assets/images/shadow01.png');
+        background-position: center bottom;
+        height: 80px;
+        width: 80px !important;
+        text-align: center;
+        vertical-align: top;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #lblOutcomePDF, #lblUploadDoc{
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    a#pfddownload,a#uploaddocuments {
+        padding: 0 12px !important;
+        float: left;
+    }
+
+}
+
+/******************************************************/
+/* Width - 768 to 1024px  *****************/
+/******************************************************/
+@media only screen and (min-width:768px) and (max-width:1024px){
+
+    body{
+        margin:0px !important;
+        font-family:arial !important;
+        overflow-x:hidden !important;
+    }
+
+    div#header{
+        font-family:arial !important;
+    }
+
+    div#lblAppTitle{
+        font-size:16px;
+        color:#003962;
+        line-height:3em;
+        width:100%;
+        font-weight:bold;
+    }
+
+    div#alertMsgOverlay,
+    div#confirmMsgOverlay,
+    div#processing,
+    div#okCheckDataConfirmMsgOverlay,
+    div#LiabNoneMsgOverlay,
+    div#verifyingMsgOverlay,
+    dov#IsJointConfirmMsgOverlay {position:fixed !important;}
+
+    div#content{
+        width:100% !important;
+    }
+
+    div.individual, div.joint{
+        width:100%;
+    }
+
+    /* Step 1  *****************/
+
+
+    /* Step 2  *****************/
+    div.textBox{
+        width:100%;
+        float:left;
+        line-height:26px;
+        height:26px;
+    }
+
+        div.textBox span.dataLabel{
+            width:35%;
+            float:left;
+            line-height:20px;
+        }
+
+        div.textBox span.dataField{
+            width:65%;
+            float:left;
+            line-height:20px;
+        }
+
+    div.stepBox{
+        height:415px;
+        float:left;
+    }
+
+    div#footer{
+        border-top:1px solid #cccccc;
+        margin-top:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footertop {
+        padding:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footerLeft {
+        padding:0px;
+        float:left;
+        width:18%;
+    }
+
+        div#footer div#footerLeft span.btn {
+            margin:5px 0px 5px 5px;
+            padding:0 12px !important;
+        }
+
+    div#footer div#footerMiddle {
+        float:left;
+        width:64%;
+        text-align:center;
+    }
+
+    div#footer div#footerMiddle img#fnlLogo{
+        width:170px !important;
+        margin-top:5px !important;
+    }
+
+    img#MarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#BrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+    img#InfoMarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#InfoBrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+
+    div#footer div#footerRight {
+        padding:0px;
+        float:left;
+        width:18%;
+    }
+
+        div#footer div#footerRight span.btn {
+            margin:5px 5px 5px 0px;
+            padding:0 12px !important;
+        }
+
+    /* Step 7 - Summary */
+
+    #tblStep07 div.individual{
+        width:100% !important;
+    }
+
+    #lblAppOutcome{
+        float:left;
+        margin-bottom:15px;
+    }
+
+    
+    #divOutcomeBody{
+        float:left;
+        width: 80% !important;
+    }
+
+    #lblOutcomedoc{
+        clear:both;
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    div.outcomeDiv{
+        float:left;
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    a#viewletterbutton {
+            padding:0 12px !important;
+            float:left;
+        }
+
+    a#launchAuthSitebutton {
+            padding:0 12px !important;
+            float:left;
+            margin-right:15px;
+        }
+
+    div.appSummary{
+        line-height:20px !important;
+        height:auto !important;
+    }
+
+    #divOutcomeIcon{
+        float: left;
+        font-size: 60px;
+        margin: 0 15px 0 0 !important;
+        background: url('../../_assets/images/shadow01.png');
+        background-position: center bottom;
+        height: 80px;
+        width: 80px !important;
+        text-align: center;
+        vertical-align: top;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #lblOutcomePDF, #lblUploadDoc{
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    a#pfddownload,a#uploaddocuments {
+        padding: 0 12px !important;
+        float: left;
+    }
+
+}
+
+
+
+/******************************************************/
+/* Width - 480 to 768px  *****************/
+/******************************************************/
+@media only screen and (min-width:481px) and (max-width:768px){
+
+    body{
+        margin:0px !important;
+        font-family:arial !important;
+        overflow-x:hidden !important;
+    }
+
+    span.btnType{
+        /*display:none !important;*/
+    }
+
+    span#cmdPrev{
+        width:74px !important;
+    }
+
+    span#cmdNext{
+        width:50px !important;
+    }
+
+    span#cmdSubmitApp, span#cmdCancel{
+        width:62px !important;
+    }
+
+    div#content{
+        width:100% !important;
+    }
+
+    div#header{
+        font-family:arial !important;
+    }
+
+    div#lblAppTitle{
+        font-size:16px;
+        color:#003962;
+        line-height:3em;
+        width:100%;
+    }
+
+    div#header div.TimeRemaining{
+        margin-left:5px;
+    }
+
+    div.individual, div.joint{
+        width:100%;
+    }
+
+    /* Step 1  *****************/
+
+    /* Step 2  *****************/
+    div.textBox{
+        width:100%;
+        float:left;
+        line-height:26px;
+        height:26px;
+    }
+
+        div.textBox span.dataLabel{
+            width:35%;
+            float:left;
+            line-height:20px;
+        }
+
+        div.textBox span.dataField{
+            width:65%;
+            float:left;
+            line-height:20px;
+        }
+
+    div.stepBox{
+        height:400px;
+        float:left;
+    }
+
+    div#footer{
+        border-top:1px solid #cccccc;
+        margin-top:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footertop {
+        padding:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footerLeft {
+        padding:0px;
+        float:left;
+        width:15% !important;
+    }
+
+        div#footer div#footerLeft span.btn {
+            margin:5px 0px 5px 5px;
+            padding:0 12px !important;
+        }
+
+    div#footer div#footerMiddle {
+        float:left;
+        width:70% !important;
+        text-align:center;
+    }
+
+    div#footer div#footerMiddle img#fnlLogo{
+        width:170px;
+        margin-top:5px !important;
+    }
+
+    img#MarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#BrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+    img#InfoMarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#InfoBrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+
+    div#footer div#footerRight {
+        padding:0px;
+        float:left;
+        width:15% !important;
+    }
+
+        div#footer div#footerRight span.btn {
+            margin:5px 5px 5px 0px;
+            padding:0 12px !important;
+        }
+
+    div#tblStep07 h3{width:auto;}
+
+    a#viewDiscStatement{
+        text-decoration:none !important;
+        float:left;
+        margin-top:0px;
+    }
+
+    #lblAppOutcome{
+        float:left;
+        margin-bottom:15px;
+    }
+
+    
+    #divOutcomeBody{
+        float:left;
+        width: 70% !important;
+    }
+
+    #lblOutcomedoc{
+        clear:both;
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    a#viewletterbutton {
+            padding:0 12px !important;
+            float:left;
+        }
+
+    div.appSummary{
+        line-height:20px !important;
+        height:auto !important;
+    }
+
+    #divOutcomeIcon{
+        float: left;
+        font-size: 60px;
+        margin: 0 15px 0 0 !important;
+        background: url('../../_assets/images/shadow01.png');
+        background-position: center bottom;
+        height: 80px;
+        width: 80px !important;
+        text-align: center;
+        vertical-align: top;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    #lblOutcomePDF, #lblUploadDoc{
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    a#pfddownload,a#uploaddocuments {
+        padding: 0 12px !important;
+        float: left;
+    }
+}
+
+
+
+/******************************************************/
+/* Width - 100 to 480px  *****************/
+/******************************************************/
+@media only screen and (min-width:100px) and (max-width:481px){
+
+    body{
+        margin:0px !important;
+        font-family:arial !important;
+        overflow-x:hidden !important;
+    }
+
+    h3.stepTitle{
+        width:100% !important;
+    }
+
+    div#content{
+        width:100% !important;
+    }
+
+    div#alertMsgOverlay,
+    div#confirmMsgOverlay,
+    div#processing,
+    div#okCheckDataConfirmMsgOverlay,
+    div#LiabNoneMsgOverlay,
+    div#verifyingMsgOverlay,
+    dov#IsJointConfirmMsgOverlay {position:fixed !important;}
+
+    div#header div.TimeRemaining{
+        margin-left:5px;
+    }
+
+    span.btnType{
+        display:none !important;
+    }
+
+    div#lblAppTitle{
+        font-size:16px;
+        color:#003962;
+        line-height:3em;
+        width:100%;
+    }
+
+    div.individual, div.joint{
+        width:100% !important;
+    }
+
+    /* Step 1  *****************/
+    div.print{
+        display:none;
+    }
+
+    .Section1 p{
+        width:100% !important;
+    }
+
+    div#tblStep01 div#disclosureFrame{
+        height:160px;
+    }
+
+    
+    div#tblStep01 #ascrail2001{
+        top: 30px !important;
+    }
+
+    div.Section1 p img[alt="Finance Now"]{
+        width:240px !important;
+        margin-left:25px !important;
+        float:left;
+    }
+
+    /* Step 2  *****************/
+    div.textBox{
+        width:100%;
+        float:left;
+        line-height:26px;
+        height:26px;
+    }
+
+        div.textBox span.dataLabel{
+            width:40%;
+            float:left;
+            line-height:20px;
+        }
+
+        div.textBox span.dataField{
+            width:60%;
+            float:left;
+            line-height:20px;
+        }
+
+    /* Step 6  ******************/
+    input#Txt_Rel_Name_1, input#Txt_Rel_Name_2{
+        width:170px;
+    }
+
+    div.dblBox{
+        height:auto!important;
+    }
+
+    div.triBox{
+        height:60px !important;
+    }
+
+    div.stepBox{
+        height:340px;
+        float:left;
+        overflow:hidden;
+        width:97% !important;
+        position:absolute;
+    }
+
+    div#footer{
+        position:absolute;
+        top:365px;
+        border-top:1px solid #cccccc;
+        margin-top:5px;
+        float:left;
+        width:100%;
+    }
+
+    div#footer div#footertop {
+        padding:5px;
+        float:left;
+        width:100% !important;
+    }
+
+    div#footer div#footertop.DolphSetW360 {
+        width:360px !important;
+    }
+
+    div#footer div#footerLeft {
+        padding:0px;
+        float:left;
+        width:12% !important;
+        clear:both;
+    }
+
+        div#footer div#footerLeft span.btn {
+            margin:5px 0px 5px 5px;
+            padding:0 12px !important;
+        }
+
+    div#footer div#footerMiddle {
+        float:left;
+        width:76% !important;
+        text-align:center;
+    }
+
+    div#footer div#footerMiddle img#fnlLogo,
+    div#footer div#footerMiddle img.fnlLogo{
+        width:170px;
+        margin-top:5px !important;
+    }
+
+    div.Section1 p img.themeLogo{width:100%; max-width:290px !important;}
+
+    #IsJointConfirmMsgOverlay{
+        position:fixed !important;
+    }
+
+    div#tblStep03a p.hideJointAddress{
+        line-height:1.25em !important;
+    }
+
+    img#MarbleLogo,
+    img.MarbleLogo{
+        position: relative;
+        height: 40px;
+        top: 0px;
+    }
+
+    img#ThemeLogo,
+    img.ThemeLogo{
+        position: relative;
+        height: auto;
+        top: -3px;
+    }
+
+    img#BrandOfLogo,
+    img.BrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+    img#InfoMarbleLogo{
+        position: relative;
+        height: 45px;
+        top: -3px;
+    }
+
+    img#InfoBrandOfLogo{
+        position: relative;
+        margin: 0 !important;
+        height: 27px !important;
+        top: -14px;
+          
+    }
+
+    div#divOutcomeIcon{display:none !important;}
+
+
+    div#footer div#footerRight {
+        padding:0px;
+        float:left;
+        width:12% !important;
+    }
+
+        div#footer div#footerRight span.btn {
+            margin:5px 5px 5px 0px;
+            padding:0 12px !important;
+        }
+
+    a#viewDiscStatement{
+        text-decoration:none !important;
+        float:left !important;
+        margin-top:0px !important;
+    }
+
+    #lblAppOutcome{
+        float:left;
+    }
+
+    #divOutcomeBody{
+        float:left;
+        width: 100% !important;
+        
+    }
+
+    .btn{
+        font-size:13px !important;
+    }
+
+    #lblOutcomedoc{display:none;}
+
+    #lblOutcomedoc, #lblOutcomePDF{
+        display: block;
+        margin-top: 5px;
+        float:left;
+        width:auto;
+    }
+    div.progressBox{width:100% !important;}
+
+    div.progressBox img.head_logo{height:50px !important;}
+
+    #lblOutcomePDF { margin-left:0px !important;}
+
+    div#getAdobeReader{margin-top:10px !important;}
+
+    a#viewletterbutton {
+            padding:0 12px !important;
+            float:left;
+            
+        }
+
+    a#viewletterbutton {
+            display:none;
+            
+        }
+
+    div#getAdobeReader{margin-top:10px;}
+
+    div.appSummary{
+        line-height:20px ;
+        height:auto ;
+    }
+
+    div.appSummary span.dataField a span.valBreak{
+        display:inline-block;
+    }
+
+    #divOutcomeIcon{
+        float: left;
+        font-size: 60px;
+        margin: 0px !important;
+        background: url('../../_assets/images/shadow01.png');
+        background-position: center bottom;
+        height: 80px;
+        width: 22% !important;
+        text-align: center;
+        vertical-align: top;
+        padding: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 3%;
+    }
+
+    #lblOutcomePDF, #lblUploadDoc{
+        display: block;
+        margin-top: 5px;
+        float:left;
+        margin-right:15px;
+    }
+
+    a#pfddownload,a#uploaddocuments {
+        padding: 0 12px !important;
+        float: left;
+    }
+
+    span#cmdUseHome{
+        margin-right:015px !important;
+    }
+
+    div.assetsTotal{
+        border: none;
+        font-weight: bold;
+    }
+
+}
+
+.ConfirmMsgBox {
+    width: 440px;
+    height: 220px;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    position: absolute;
+    top: -10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 10px;
+}
+
+    .ConfirmMsgBox p {
+        font-size: 12px;
+        float: left;
+        width: 100%;
+        line-height: 1.25em;
+        height: auto;
+        margin: 0;
+    }
+
+    .ConfirmMsgBox h2 {
+        font-size: 16px;
+        color: #003962;
+        margin-bottom: 5px;
+    }
+
+    .ConfirmMsgBox span.btn {
+        margin: 10px 5px 5px 0px;
+        display: inline-block;
+    }
+
+#fnlcardBox {
+    width: 440px;
+    height: 340px;
+    border: 1px solid #ccc;
+    background-color: #f3f3f3;
+    position: absolute;
+    top: -10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 0 10px;
+}
+
+    #fnlcardBox p {
+        font-size: 12px;
+        float: left;
+        width: 100%;
+        line-height: 1.25em;
+        height: auto;
+        margin: 0;
+    }
+
+    #fnlcardBox h2 {
+        font-size: 16px;
+        color: #003962;
+        margin-bottom: 5px;float:left;
+    }
+
+    #fnlcardBox span.btn {
+        margin: 10px 5px 5px 0px;
+        display: inline-block;
+    }
+
+    #fnlcardBox img.fnlcard{
+        float:left;
+        margin-top:10px;
+        width: 140px;
+        margin-bottom: -20px;
+    }
+
+/******************************************************/
+/* Width - 100 to 480px  *****************/
+/******************************************************/
+@media only screen and (min-width:100px) and (max-width:480px) {
+
+
+
+}
+

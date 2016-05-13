@@ -1,0 +1,54 @@
+
+/* CSS for qik-confirm */ 
+
+.qconfirm-bg {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	height: 100%; 
+	width: 100%;  
+	z-index: 9999; 
+	text-align: center; 
+}
+
+.qconfirm-bg .qconfirm-msgbox {
+	width:300px;
+	height:140px;
+	border: 1px solid #ccc;
+	background-color: #f3f3f3;
+	position: absolute;
+	top:-10px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	padding:0 10px;
+}
+
+.qconfirm-bg .qconfirm-msgbox .title {
+	font-size: 16px;
+	color: #003962;
+	margin-bottom: 5px;
+	
+    display: block;
+    margin-top: 0.83em;
+	margin-bottom: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;	
+}
+
+.qconfirm-bg .qconfirm-msgbox .content {
+	font-size:12px;
+	float:left;
+	width:100%;
+	line-height:1.25em;
+	height:35px;
+	margin:0;
+}
+
+.qconfirm-bg .qconfirm-msgbox span.btn {
+	margin: 10px 5px 5px 0px;
+	display: inline-block;
+}		
+
