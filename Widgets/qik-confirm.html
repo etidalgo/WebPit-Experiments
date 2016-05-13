@@ -12,11 +12,16 @@
 
 		<script type="text/javascript" >
 			var confirmBox;
-
+			function QikConfirm_Blocked() {
+				var deferredObj;
+				deferredObj = new $.Deferred();
+				
+			}
+			
 			function ShowQikConfirm() {
 				confirmBox = $.qikconfirm({
 					title: 'Confirmation',
-					content: 'Your session is about to expire in <b>zero</b> minutes. Once it has expired any data entered will now be lost!',
+					content: 'You are about to authorise your Loan, by clicking ‘Yes’, you are confirming you have read and understood your Secured Loan Agreement & Disclosure Statement and accept its Terms & Conditions.\r\nClick No to review the documents as required.',
 					confirmButton: 'Generate',
 					cancelButton: 'No',
 					icon: 'fa fa-question-circle',
@@ -49,6 +54,7 @@
 
 				<button type="button" onclick="ShowQikConfirm()">Show Qik Confirm</button>
 				<button type="button" onclick="ShowQikAlert()">Show Qik Alert</button>
+				<button type="button" onclick="QikConfirm_Blocked()">Show Qik Confirm Blocking</button>
 
                 <input type="hidden" id="Hid_AlertFocus" name="Hid_AlertFocus" value="">
 				
