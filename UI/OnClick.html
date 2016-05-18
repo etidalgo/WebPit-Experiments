@@ -39,6 +39,29 @@
 	$(document).ready(function(){
 		$("div.checkField input[type=checkbox]").click(TogglePreset);
 		$("div.updateAction input[type=button]").click(UpdatePreset).prop("disabled", true);
+		
+		$('.DocumentViewed').click(function () {
+			if (this.checked) {
+				$(this).prop("disabled", true); // you can't unview
+				// click link
+			  var section = $(this).closest(".DocumentSection");
+			  var link = $(section).find(".DocumentLink");
+			  $(link).get(0).click();
+			}
+
+		});
+//The CSS3 :not() selector • CSS & HTML • Kilian Valkhof <https://kilianvalkhof.com/2008/css-xhtml/the-css3-not-selector/>
+
+		$(".DocumentLink").click(function () {
+      var section = $(this).closest(".DocumentSection");
+      var tickbox = $(section).find(".DocumentViewed");
+      $(tickbox).prop("checked", true);
+      $(tickbox).prop("disabled", true);
+	  $(section).find("input[type=checkbox]").not(".DocumentViewed").prop("disabled", false);
+		});	
+    
+    $("input[type=checkbox]").prop("disabled", true);
+    $("input[type=checkbox].DocumentViewed").prop("disabled", false);		
 	});	
 	</script>
 	
@@ -53,5 +76,18 @@
 	<div class="updateAction" ><input id="override_update_01" type="button" value="Update" ></input></div>
 </div>
 </div>
+
+    <div id="TermsandConditionsDocument" class="DocumentSection">
+		<div>
+            <input id="Chk_ViewTC" class="DocumentViewed" type="checkbox">
+            <a class="DocumentLink" href="/home/DisplayPdf?operation=term" id="DownloadTermsCondition" target="_blank">View Terms and Conditions</a>
+            (a PDF viewer is required, click <a target="_blank" href="http://get.adobe.com/reader/">here</a> to download)
+        </div>
+        <br />
+        <div class="checkBoxPanel">
+            <input type="checkbox" id="Chk_AgreeTerms" class="DocumentAccepted" />
+            I confirm I have read, understood and accepted the non-binding Terms and Conditions.
+        </div>
+    </div>
 </body>
 </html>
