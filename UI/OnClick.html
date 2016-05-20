@@ -35,6 +35,12 @@
 		}
 		
 	}
+	function ViewLoanAgreement() {
+		// $('#DownloadTermsCondition').click();
+		// window.location = document.getElementById('DownloadTermsCondition').href;
+		//$('#DownloadTermsCondition').click(); 
+		document.getElementById('DownloadTermsCondition').click(); // $('#DownloadTermsCondition').click(); does not open link
+	};
 	
 	$(document).ready(function(){
 		$("div.checkField input[type=checkbox]").click(TogglePreset);
@@ -50,7 +56,7 @@
 			}
 
 		});
-//The CSS3 :not() selector â€¢ CSS & HTML â€¢ Kilian Valkhof <https://kilianvalkhof.com/2008/css-xhtml/the-css3-not-selector/>
+//The CSS3 :not() selector • CSS & HTML • Kilian Valkhof <https://kilianvalkhof.com/2008/css-xhtml/the-css3-not-selector/>
 
 		$(".DocumentLink").click(function () {
       var section = $(this).closest(".DocumentSection");

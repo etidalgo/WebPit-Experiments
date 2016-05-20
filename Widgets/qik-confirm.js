@@ -179,24 +179,16 @@ var qconfirm, QConfirm;
     };
 
     qconfirm.pluginDefaults = {
-        template: `
-				<div class="qconfirm-bg" >
-                    <div class="qconfirm-msgbox" >
-                        <div class="title">Confirmation</div>
-                        <p class="content"></p>
-						<div class="buttons" />
-                    </div>
-                </div> 
-				`,
-        title: 'Confirmation',
-        content: 'Are you sure to continue?',
-        icon: '',
-        confirmButton: 'Okay',
-        cancelButton: 'Cancel',
-        confirmButtonClass: 'btn-default',
-        cancelButtonClass: 'btn-default',
-        theme: 'white',
-        animation: 'scale',
+        template: "<div class='qconfirm-bg' ><div class='qconfirm-msgbox' ><div class='title'>Confirmation</div><p class='content'></p><div class='buttons' /></div></div>",
+        title: "Confirmation",
+        content: "Are you sure to continue?",
+        icon: "",
+        confirmButton: "Okay",
+        cancelButton: "Cancel",
+        confirmButtonClass: "btn-default",
+        cancelButtonClass: "btn-default",
+        theme: "white",
+        animation: "scale",
         animationSpeed: 400,
         confirm: function () {
         },
