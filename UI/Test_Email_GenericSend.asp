@@ -1,8 +1,5 @@
 <%@ Language=VBScript %> 
 
-<!--#include virtual="qik/includes/Qikdata.inc"-->
-<!--#include virtual="qik/includes/Qikglobal.inc"-->
-<!--#include virtual="qik/includes/Qikdsn.inc"-->
 
 
 <html>
@@ -27,7 +24,7 @@ Dim Attachments(7)
 	
 <% 	
 'Try dynamic, must have 0 at start
-Dim DynamicArray(0)
+ReDim DynamicArray(0)
 Dim idxLast
 %>
 	DynamicArray LBound: <%=LBound(DynamicArray)%><br/>
@@ -46,8 +43,12 @@ DynamicArray(idxLast) = "C:\Dev\aklqikdev-solution\aklqikdev-local\qik\Test\pbte
 	DynamicArray UBound: <%=UBound(DynamicArray)%><br/>
 <%
 Dim result
-	result = Email_GenericSend("qikmail2@fnl.net.nz", "Not a Spammer", "ernest@financenow.co.nz", "This is NOT spam", "Please ignore this message", DynamicArray )
+	For ix = LBound(DynamicArray) to UBound(DynamicArray) 
+		Response.Write "ix: " & ix & " : " 
+		If Len(DynamicArray(ix)) > 0 Then Response.Write  DynamicArray(ix)
+		Response.Write "<br/>" 
 
+	Next
 %>
 	Result: <%=result%>
 	
