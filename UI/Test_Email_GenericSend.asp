@@ -29,6 +29,7 @@ Dim idxLast
 %>
 	DynamicArray LBound: <%=LBound(DynamicArray)%><br/>
 	DynamicArray UBound: <%=UBound(DynamicArray)%><br/>
+	Resize <br/>
 <%
 idxLast = UBound(DynamicArray)
 ReDim Preserve DynamicArray(idxLast + 1) 
