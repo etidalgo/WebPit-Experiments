@@ -2,13 +2,14 @@
 /* CSS for qik-confirm */ 
 
 .qconfirm-bg {
-	position: absolute; 
+	position: fixed; /* prevent dialog from scrolling off even if page does */
 	top: 0; 
 	left: 0; 
 	height: 100%; 
 	width: 100%;  
 	z-index: 9999; 
 	text-align: center; 
+    background:url('https://www.fnl.co.nz/qik/_assets/images/overlay_white_bg.png');
 }
 
 .qconfirm-bg .qconfirm-msgbox {
@@ -16,7 +17,7 @@
 	border: 1px solid #ccc;
 	background-color: #f3f3f3;
 	margin: 0 auto;
-	padding:0 10px;
+	padding:10px;
 
     /* vertically centred ' */
 	height:auto;
@@ -51,6 +52,7 @@
 }
 
 .qconfirm-bg .qconfirm-msgbox span.btn {
+    border-radius: 0px;
 	margin: 10px 5px 5px 0px;
 	display: inline-block;
 }		

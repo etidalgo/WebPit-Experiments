@@ -109,11 +109,11 @@ var qconfirm, QConfirm;
 
             var $btnc = this.$el.find('.buttons');
             if (this.confirmButton) {
-                this.$confirmButton = $('<span class="btn">' + this.confirmButton + '</span>').appendTo($btnc);
+                this.$confirmButton = $('<span class="btn confirm" >' + this.confirmButton + '</span>').appendTo($btnc);
                 this.$confirmButton.addClass(this.confirmButtonClass);
             }
             if (this.cancelButton && this.type !== 'alert') {
-                this.$cancelButton = $('<span class="btn">' + this.cancelButton + '</span>').appendTo($btnc);
+                this.$cancelButton = $('<span class="btn cancel">' + this.cancelButton + '</span>').appendTo($btnc);
                 this.$cancelButton.addClass(this.cancelButtonClass);
             }
             if (this.autoClose)
