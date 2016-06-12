@@ -19,15 +19,17 @@
 'Assumption - Emails seem to have a maximum of 3 attachments (as of 20 May 2016). Default to 7 as a max, increase if needed. 
 Dim Attachments(7) 
 %>
+	Dim Attachments(7) <br/>
 	Attachments LBound: <%=LBound(Attachments)%><br/>
 	Attachments UBound: <%=UBound(Attachments)%><br/>
-	
+	<br/>
 <% 	
 Dim DimArray_NoInitDim()
 %>
 	Dim DimArray_NoInitDim() <br/>
 	DimArray_NoInitDim LBound: LBound(DimArray_NoInitDim) causes an error <%'=LBound(DimArray_NoInitDim)
-	%><br/>
+	%>
+	<br/>
 	DimArray_NoInitDim UBound: UBound(DimArray_NoInitDim) causes an error <%'=UBound(DimArray_NoInitDim)
 	%><br/>
 
@@ -36,6 +38,7 @@ Dim DimArray_NoInitDim()
 	<pre>
 	You can also declare an array whose size changes during the time your script is running. This is called a dynamic array. The array is initially declared within a procedure using either the Dim statement or using the ReDim statement. However, for a dynamic array, no size or number of dimensions is placed inside the parentheses. 
 	</pre>	
+	<br/>
 <% 	
 Dim DimArray_InitDim(0)
 Dim idxLast
@@ -46,6 +49,7 @@ Dim idxLast
 	%><br/>
 	DimArray_InitDim UBound:  <%=UBound(DimArray_InitDim)
 	%><br/>
+	<br/>
 
 <%	
 	idxLast = UBound(DimArray_InitDim)
@@ -57,8 +61,7 @@ Dim idxLast
 	%><br/>
 	DimArray_InitDim UBound:  <%=UBound(DimArray_InitDim)
 	%><br/>
-
-	
+	<br/>
 <%	
 'Best practice: Use ReDim AND initial dimension
 ReDim DynamicArray(0)
@@ -68,23 +71,26 @@ ReDim DynamicArray(0)
 	DynamicArray LBound: <%=LBound(DynamicArray)%><br/>
 	DynamicArray UBound: <%=UBound(DynamicArray)%><br/>
 	Assign <br/>
+	<br/>
 <%
 DynamicArray(0) = "Zero element"	
 %>
 	DynamicArray(0): <%=DynamicArray(0)%></br>
-	Resize <br/>
+	Resize ReDim Preserve DynamicArray(idxLast + 1) <br/>
 <%
 idxLast = UBound(DynamicArray)
 ReDim Preserve DynamicArray(idxLast + 1) 
 %>
 	DynamicArray LBound: <%=LBound(DynamicArray)%><br/>
 	DynamicArray UBound: <%=UBound(DynamicArray)%><br/>
+	<br/>
 <%
 idxLast = UBound(DynamicArray)
 DynamicArray(idxLast) = "C:\Dev\aklqikdev-solution\aklqikdev-local\qik\Test\pbtech\pbtech_qik_inc.txt"	
 %>
 	DynamicArray LBound: <%=LBound(DynamicArray)%><br/>
 	DynamicArray UBound: <%=UBound(DynamicArray)%><br/>
+	<br/>
 <%
 Dim result
 	For ix = LBound(DynamicArray) to UBound(DynamicArray) 
