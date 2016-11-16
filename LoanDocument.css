@@ -1,0 +1,207 @@
+
+.template {
+}
+
+/* Fonts */
+/* BRU516 BodyText1 */
+body {
+  font: normal 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU517 MajorHeading */
+/*	Font & format	Museo 700, size 16pt, line height 19.2pt, space after 12.2pt,  brand colour */
+.MajorHeading {
+  font: normal 16pt/19.2pt Arial, Helvetica, sans-serif;
+    color: #f15a29;
+}
+
+/* BUR518 MinorHeading */
+/*	Font & format	Museo 700, size 15pt, line height 18pt, space after 2mm,  brand colour */
+.MinorHeading {
+  font: normal 15pt/18pt Arial, Helvetica, sans-serif;
+    color: #f15a29;
+}
+
+/* BRU519 CasualHeading */
+/* Font & format	Museo 700, italic, size 11.5pt, line height 13.8pt, 80% black*/
+.CasualHeading {
+  font: normal 11.5pt/13.8pt Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+	
+/* BRU520 BodyLabel1 */
+/*	Font & format	Arial, 11pt, line height 13.2pt, 100% black, Bold, single spacing, right aligned */
+.BodyLabel1 {
+  font: normal bold 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+
+/* BRU521 MajorSideHeading */
+/* Font & format	Museo 300, size 12pt, line height 12pt,  brand colour */
+.MajorSideHeading {
+  font: normal bold 12pt/12pt Arial, Helvetica, sans-serif;
+    color: #f15a29;
+}
+
+/* BRU522 MinorSideHeading */
+/*	Font & format	Museo 300, size 11.5pt, line height 12pt, 100% black */
+.MinorSideHeading {
+  font: normal bold 11.5pt/12pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU523 SmallHeading */
+/*	Font & format	Arial, size 13pt / 17.3px, Bold, 1mm space to bullet points */
+.SmallHeading {
+  font: normal bold 13pt/15pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU524 SideBodyText */
+/*	Font & format	Museo 300, size 9.5pt, line height 11.4pt, 80% black */
+.SideBodyText {
+  font: normal 9.5pt/11.4pt Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+/* BRU525 SmartWaySideHeading */
+/*	Font & format	Arial 10pt / 13.3pt, Bold */
+.SmartWaySideHeading {
+  font: normal bold 10pt/13.3pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BUR526 SmartWayBodyText  */
+/*	Font & format	Arial 10pt / 13.3pt */
+.SmartWayBodyText {
+  font: normal 10pt/13.3pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU527 SmartWayGrey Striping */
+/*	Font & format	10% black */
+.SmartWayGrey {
+  font: normal 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: #191919;
+}
+
+/* BRU528 BrandLabel1 */
+/*	Font & format	Museo 700, size 12pt / 16px, line height 13.2pt / 18px,  <brand colour> */
+.BrandLabel1 {
+  font: normal 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: #f15a29;
+}
+
+/* BRU529 VersionControl */
+/*	Font & format	Arial 5pt / 7px, 100% black */
+.VersionControl {
+  font: normal 5pt/7pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU530 BodycopyBulletPoint */
+/*	Font & format	Bulletpoint  = 1mm / 4px Arial circle, left indent is <dynamic>, right indent to text 4mm / 15px.  Text = Arial, 11pt / 15px, line height 13.2pt, 100% black, single spacing */
+.BodycopyBulletPoint {
+  font: normal 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU531 BodyText2 */
+/*	Font & format	Arial, 12pt / 16px, line height 13.2pt, 100% black, single spacing */
+.BodyText2 {
+  font: normal 12pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU532 SoftText */
+/*	Font & format	Museo 300, 11pt / 15px, line height 13.2pt,  80% black */
+.SoftText {
+  font: normal 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: #333333;
+}
+
+/* BRU533 FootNote1 */
+/* 	Font & format	Arial, 9pt / 12px, line height 13.2pt, 100% black, single spacing */
+.BodyLabel1FootNote1 {
+  font: normal bold 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU534 BrandLabel2 */
+/*	Font & format	Museo 500, 11pt / 15px, line height 13.2pt, brand colour, single spacing */
+.BrandLabel2 {
+  font: normal bold 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU535 BrandLabel3 */
+/*	Font & format	Arial, 11pt / 15px, brand colour, single spacing */
+.BrandLabel3 {
+  font: normal bold 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+/* BRU536 BrandText1 */
+/*	Font & format	Arial, 12pt / 16px, line height 13.2pt, 100% brand colour, single spacing */
+.BrandText1 {
+  font: normal bold 11pt/13.2pt Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+
+/* 3.1.1	BRU500 – Page Rules  */
+body.LoanDocument {
+    width: 794px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+/* 3.1.2	BRU501 – Narrow Three Sided Content Box Style  */
+.BRU501, .ContentBoxThreeSideNarrow {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 453px;
+  margin: 8px 28px 8px 0;
+  padding: 15px 23px 15px 48px;
+  overflow: hidden;
+  border: 1px solid #000000;
+  border-left-width: 0;
+  -webkit-border-radius: 0 11px 11px 0;
+  border-radius: 0 11px 11px 0;
+}
+
+/* 3.1.7	BRU506 – Narrow Four Sided Marketing Box Style */
+.BRU506, .MarketingBoxNarrowFourSide {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 178px;
+  margin: 9px 9px 9px 9px;
+  padding: 9px 9px 9px 9px;
+  overflow: hidden;
+  border: 1px solid #414042;
+  -webkit-border-radius: 11px 11px 11px 11px;
+  border-radius: 11px 11px 11px 11px;
+}
+
+.FloatRight {
+    float: right;
+}
+
+.ReferenceArea {
+    float: right;
+}
+
+div.columns div.col {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 32%;
+}
+
+
