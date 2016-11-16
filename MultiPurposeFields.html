@@ -1,0 +1,30 @@
+
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script type="text/javascript">
+
+	function useStyle1() {
+		$("#txtField1").prop("title", "Number 1");
+		$("#txtField2").prop("title", "Number 2");
+	}
+	function useStyle2() {
+		$("#txtField1").prop("title", "Date 1");
+		$("#txtField2").prop("title", "Date 2");
+	}
+	window.onload = function() {
+	}
+	</script>
+</head>
+<body>
+
+	<div><input type="text" class="lenderView" id="txtField1" name="txtField1 value="alpha" title="Text1" /></div>
+	<div><input type="text" class="lenderView" id="txtField2" name="txtField2 value="beta" title="Text2"/></div>
+
+	<div><input type="button" id="enableLender" value="use Style 1" onclick="useStyle1();" /></div>
+	<div><input type="button" id="disableLender" value="use Style 2" onclick="useStyle2();" /></div>
+
+</body>
+</html>
+
